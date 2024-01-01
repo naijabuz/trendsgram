@@ -14,6 +14,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import FileUploader from "../shared/FileUploader";
+import Loader from "../shared/Loader";
 import { postValidation } from "@/lib/validation";
 import { Models } from "appwrite";
 import { useCreatePost } from "@/lib/react-query/queriesAndMutations";
@@ -145,7 +146,8 @@ const PostForm = ({ post }: PostFormProps) => {
             type="submit"
             className="shad-button_primary whitespace-nowrap"
           >
-            Submit
+            {isLoadingCreate && <Loader />}
+            Post
           </Button>
         </div>
       </form>
