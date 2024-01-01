@@ -82,7 +82,7 @@ const SignUpForm = () => {
           className="w-[120px] h-auto"
         />
 
-        <h2 className="h3-bold md:h2-bold pt-5 sm:pt-12">
+        <h2 className="h3-bold md:h2-bold pt-2 sm:pt-6">
           Create a new account
         </h2>
 
@@ -92,7 +92,7 @@ const SignUpForm = () => {
 
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="flex flex-col gap-5 w-full mt-4"
+          className="flex flex-col gap-2 w-full mt-4"
         >
           <FormField
             control={form.control}
@@ -149,7 +149,8 @@ const SignUpForm = () => {
               </FormItem>
             )}
           />
-          <Button type="submit" className="shad-button_primary">
+
+          <Button type="submit" className="shad-button_primary mt-5">
             {isCreatingAccount || isSigningIn || isUserLoading ? (
               <div className="flex-center gap-2">
                 {" "}

@@ -1,12 +1,13 @@
 import { Link, useLocation } from "react-router-dom";
 import { bottombarLinks } from "@/constants/";
+import { INavLink } from "@/types";
 
 const Footer = () => {
   const { pathname } = useLocation();
 
   return (
     <footer className="bottom-bar">
-      {bottombarLinks.map(({ link }: any) => {
+      {bottombarLinks.map((link: INavLink) => {
         const { imgURL, route, label } = link;
         const isActive = pathname === route;
         return (
